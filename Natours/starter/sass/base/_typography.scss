@@ -7,6 +7,10 @@ body {
     line-height: 1.7;
     color: $color-grey-dark;
     padding: 3rem;
+
+    @include respond(tab-port){
+        padding: 0;
+    }
 }
 
 .heading-primary {
@@ -43,6 +47,10 @@ body {
     -webkit-background-clip: text;
     letter-spacing: .2rem;
     color: transparent;
+
+    @include respond(tab-port){
+        font-size: 2.5rem;
+    }
 
     transition: all .2s;
 

@@ -6,13 +6,24 @@
         margin-bottom: $gutter-vertical;
     }
 
+    
     @include clearfix;
 
     [class^="col-"]{
         float: left;
 
+        @include respond(tab-port){
+            float: none;
+            width: 100% !important;
+            padding: 0 2rem;
+        }
+
         &:not(:last-child){
             margin-right: $gutter-horizontal;
+            @include respond(tab-port){
+                margin-right: 0;
+                margin-bottom: 4rem;
+            }
         }
     }
 

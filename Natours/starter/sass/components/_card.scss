@@ -141,4 +141,51 @@
         font-size: 6rem;
         font-weight: 100;
     }
+
+    @include respond(tab-port){
+        height: auto;
+    
+    
+        &__side{
+            height: auto;
+            position: relative;
+    
+            &--back{
+                transform: rotateY(0deg);
+                clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+                margin-top: -2rem;
+            }
+        }
+    
+        &:hover &__side--front{
+            transform: rotateY(0deg);
+        }
+    
+
+
+        &__price-box{
+            margin-bottom: 2rem;
+        }
+    
+
+        &__price-value{
+            font-size: 4rem;
+            margin-bottom: 2rem;
+        }
+    
+
+    
+ 
+    
+    
+        &__cta{
+            position: relative;
+            top: 0;
+            left: 0;
+            transform: translate(0,0);
+            width: 100%;
+            text-align: center;
+            padding: 2rem 0;
+        }
+    }
 }
